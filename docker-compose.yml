@@ -1,0 +1,14 @@
+version: "3.1"
+services:
+  mysql:
+    image: mysql
+    restart: always
+    volumes:
+      - "./docker/mysql:/var/lib/mysql"
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_DATABASE: boyner-cms
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 12345
